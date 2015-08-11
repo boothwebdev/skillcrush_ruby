@@ -3,13 +3,15 @@ def determine_current_hour
 	current_hour = current_time.hour
 end
  
- def username
+ def determine_name
 	puts "what is your name"
-	username = gets
-
+	determine_name = gets.chomp
+	
+end
  
 def greeting(name)
 	current_hour = determine_current_hour
+	determine_name = name
 	if(current_hour > 3 && current_hour < 12)
 		time = "morning"
 	elsif(current_hour > 12 && current_hour < 18)
@@ -19,4 +21,4 @@ def greeting(name)
 	end
 	puts "Good #{time}, #{name.capitalize}!"
 end
-greeting("Emily")
+greeting("name")
